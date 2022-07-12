@@ -1,0 +1,8 @@
+service GreetingService("service-id"):
+    greeting: string -> string
+
+func greeting(name:string, node:string, greeting_service_id: string) -> string:
+  on node:
+    GreetingService greeting_service_id
+    res <- GreetingService.greeting(name)
+  <- res
