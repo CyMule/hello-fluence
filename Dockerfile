@@ -22,4 +22,10 @@ RUN cargo install marine && cargo +nightly install mrepl
 
 COPY greeting.aqua /greeting.aqua
 
+# Copy and make executable
+COPY entry.sh /entry.sh
+
+RUN chmod +x /entry.sh
+
+ENTRYPOINT [ "/entry.sh" ]
 # ENTRYPOINT ["tail", "-f", "/dev/null"]

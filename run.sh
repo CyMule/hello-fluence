@@ -8,6 +8,9 @@ cp greeting.aqua /greeting/greeting.aqua
 # [2022-07-12T21:24:21.483056Z INFO  particle_node] AIR interpreter: "/.fluence/v1/aquamarine_0.24.16.wasm"
 # [2022-07-12T21:24:21.483081Z INFO  particle_node] node public key = HmTDLeLkJb55EobhnwZXSJE4PFDRhxmYyTBVGZdiQ93Z
 # [2022-07-12T21:24:21.483096Z INFO  particle_node] node server peer id = 12D3KooWSapP5mvTVVLZeh78RYJsD6JtsaG4jer2w3YWeYncJ5mV
+
+# echo $res | grep -o -e 'base64 = .*' | cut -d " " -f 3
+
 export PRIV_KEY=b6UYuzFZHxgYsJ/bAFujMLM4EcRtSPgkikMlB3rk7Ig=
 export PUB_KEY=HmTDLeLkJb55EobhnwZXSJE4PFDRhxmYyTBVGZdiQ93Z
 export PEER_ID=12D3KooWSapP5mvTVVLZeh78RYJsD6JtsaG4jer2w3YWeYncJ5mV
