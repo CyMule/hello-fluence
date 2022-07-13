@@ -14,18 +14,7 @@ ENV PATH="/root/.cargo/bin:${PATH}"
 
 RUN rustup install nightly && rustup target add wasm32-wasi
 
-# RUN npm cache clean -f && npm install -g n && n stable
-
+# Install the Aqua compiler and standard library 
 RUN npm -g install @fluencelabs/aqua && npm -g install @fluencelabs/aqua-lib
 
 RUN cargo install marine && cargo +nightly install mrepl
-
-COPY greeting.aqua /greeting.aqua
-
-# Copy and make executable
-COPY entry.sh /entry.sh
-
-RUN chmod +x /entry.sh
-
-ENTRYPOINT [ "/bin/bash" ]
-# ENTRYPOINT ["tail", "-f", "/dev/null"]
