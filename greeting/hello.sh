@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# aqua remote list_modules \
-#      --addr /ip4/127.0.0.1/tcp/9999/ws/p2p/$PEER_ID
-
 # Rebuild the rust code
 ./build.sh
 
@@ -16,9 +13,7 @@ result=$(aqua remote deploy_service \
 BLUEPRINT_ID=$(echo "$result" | grep -o -E '[a-zA-Z0-9-]+{32}' | sed -n '1 p')
 SERVICE_ID=$(echo "$result" | grep -o -E '[a-zA-Z0-9-]+{32}' | sed -n '2 p')
 
-# aqua remote get_interface \
-#      --addr /ip4/127.0.0.1/tcp/9999/ws/p2p/$PEER_ID \
-#      --id "$SERVICE_ID"
+
 
 # Running aqua script from https://doc.fluence.dev/docs/tutorials_tutorials/tutorial_run_local_node
 aqua run \
