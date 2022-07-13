@@ -27,5 +27,5 @@ COPY entry.sh /entry.sh
 
 RUN chmod +x /entry.sh
 
-ENTRYPOINT [ "/entry.sh" ]
+ENTRYPOINT [ "/bin/bash" ]
 # ENTRYPOINT ["tail", "-f", "/dev/null"]
